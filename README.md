@@ -56,11 +56,11 @@ By completing this assignment, you should be able to:
 
 # Student Information
 
-**Name:**
+**Name: Pranav Senthil Vadivel**
 
 ---
 
-**Group Number:**
+**Group Number: Group 1, The Problem Solvers**
 
 ---
 
@@ -72,7 +72,7 @@ Check the class you were responsible for creating.
 
 * [ ] Restaurant
 * [ ] MenuItem
-* [ ] Ingredient
+* [X] Ingredient
 
 ---
 

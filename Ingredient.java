@@ -35,5 +35,20 @@ public class Ingredient{
         this.allergen = value;
     }
 
+    public String getAllergenType()
+    {
+        return allergenType;
+    }
+
+    public void setAllergenType(String type)
+    {
+        this.allergenType = type;
+    }
+
+    public String toString()
+    {
+        return "Name: " + name + "\nAllergen: " + allergen + "\nAllergen Type: " + allergenType;
+    }
+
     
 }

@@ -30,7 +30,7 @@ public class Restaurant {
     //My Setters!!
     public void setName(String name) {this.name = name;}
     public void setCuisine(String cuisine){this.cuisine = cuisine;}
-    public void setRating(String rating) {this.rating = rating;}
+    public void setRating(double rating) {this.rating = rating;}
    
    // adding a MenuItem to this restaurant
    public void addMenuItem(MenuItem item) {

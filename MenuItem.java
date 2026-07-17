@@ -7,14 +7,16 @@ public class MenuItem {
     private int calories;
     private ArrayList<Ingredient> ingredients = new ArrayList<>();
 
-    public MenuItem() {
+    public MenuItem() 
+    {
         name = null;
         category = null;
         price = -1.0;
         calories = -1;
     }
 
-    public MenuItem(String newName, String newCategory, double newPrice, int newCalories) {
+    public MenuItem(String newName, String newCategory, double newPrice, int newCalories) 
+    {
         name = newName;
         category = newCategory;
         price = newPrice;

@@ -14,25 +14,65 @@ public class MenuItem {
         calories = -1;
     }
 
-    public MenuItem(String newName, String newCategory, double newPrice, int newCalories, ArrayList<Ingredient> newIngredients) {
+    public MenuItem(String newName, String newCategory, double newPrice, int newCalories) {
         name = newName;
         category = newCategory;
         price = newPrice;
         calories = newCalories;
-        ingredients.add(newIngredients);
     }
 
-    public String getName() {return name;}
-    public void setName(String newName) {name = newName;}
-    public String getCategory() {return category;}
-    public void setCategory(String newCategory) {category = newCategory;}
-    public double getPrice() {return price;}
-    public void setPrice(double newPrice) {price = newPrice;}
-    public int getCalories() {return calories;}
-    public void setCalories(int newCalories) {calories = newCalories;}
-    public ArrayList<Ingredient> getIngredients() {return ingredients;}
-    public void addIngredient(ArrayList<Ingredient> ingredient) {ingredients.add(ingredient);}
-    public String toString() {
+    public String getName() 
+    {
+        return name;
+    }
+
+    public void setName(String newName) 
+    {
+        name = newName;
+    }
+
+    public String getCategory() 
+    {
+        return category;
+    }
+
+    public void setCategory(String newCategory) 
+    {
+        category = newCategory;
+    }
+
+    public double getPrice()
+    {
+        return price;
+    }
+
+    public void setPrice(double newPrice) 
+    {
+        price = newPrice;
+    }
+
+    public int getCalories() 
+    {
+        return calories;
+    }
+
+    public void setCalories(int newCalories) 
+    {
+        calories = newCalories;
+    }
+
+    public ArrayList<Ingredient> getIngredients() 
+    {
+        return ingredients;
+    }
+
+    public void addIngredient(Ingredient ingredient) 
+    {
+        ingredients.add(ingredient);
+    }
+
+    public String toString() 
+    {
         return getClass().getName();
     }
 }

@@ -54,7 +54,7 @@ public class RestaurantReviewSystem
                 //Brandon 
                 String[] fields = line.split(","); // split everything between commas
 
-                retaurantName = fields[0];
+                restaurantName = fields[0];
                 cuisine = fields[1];
                 rating = Double.parseDouble(fields[2]);
                 menuItemName = fields[3];
@@ -133,51 +133,7 @@ public class RestaurantReviewSystem
                 // TODO:
                 // If the restaurant does not exist,
                 // create it and add it to the ArrayList.
-                /*if (restaurant == null)
-                {
-                    restaurant = new Restaurant(restaurantName, cuisine, rating);
-                    restaurants.add(restaurant);
-                }
-                //---------------------------------------------------
-
-                //---------------------------------------------------
-                // TODO:
-                // Create the MenuItem object.
-                //---------------------------------------------------
-
-                MenuItem menuItem = null;
-
-                //---------------------------------------------------
-                // TODO:
-                // Split the ingredient string using ';'
-                //---------------------------------------------------
-
-                // Example:
-                // String[] ingredients = ingredientData.split(";");
-
-                //---------------------------------------------------
-                // TODO:
-                // For each ingredient:
-                //
-                // Split using "|"
-                //
-                // Example:
-                // String[] data = ingredient.split("\\|");
-                //
-                // data[0] = ingredient name
-                // data[1] = allergen (true/false)
-                // data[2] = allergen type
-                //
-                // Create an Ingredient object.
-                // Add it to the MenuItem.
-                //---------------------------------------------------
-
-
-                //---------------------------------------------------
-                // TODO:
-                // Add the MenuItem to the Restaurant.
-                //---------------------------------------------------
-            */
+               
             }
 
             file.close();
@@ -239,7 +195,7 @@ public class RestaurantReviewSystem
         for(Restaurant restaurant : restaurants)
         {
             double total = 0;
-            int count = restuarant.getMenuItems().size();
+            int count = restaurant.getMenuItems().size();
 
             for(MenuItem item : restaurant.getMenuItems())
             {
@@ -253,14 +209,65 @@ public class RestaurantReviewSystem
         System.out.println();
     }
 
+    // Pranav Senthil Vadivel 
     public static void highestPricedMenuItem(ArrayList<Restaurant> restaurants)
     {
-        // TODO
+
+        System.out.println("=== Highest Priced Menu Item ===");
+
+        MenuItem highestItem = null;
+        String restaurantName = "";
+
+        for(Restaurant restaurant : restaurants)
+        {
+            for (MenuItem item : restaurant.getMenuItems())
+            {
+                if (highestItem == null || item.getPrice() > highestItem.getPrice())
+                {
+                    highestItem = item;
+                    restaurantName = restaurant.getName();
+                }
+
+            }
+        }
+
+            if (highestItem != null)
+        {
+            System.out.printf("%s (%s): $%.2f%n", highestItem.getName(), restaurantName, highestItem.getPrice());
+        }
+
+        System.out.println();
+    
+
     }
 
+   
+    // Pranav Senthil Vadivel
     public static void lowestPricedMenuItem(ArrayList<Restaurant> restaurants)
     {
-        // TODO
+        System.out.println("=== Lowest Priced Menu Item ===");
+
+        MenuItem lowestItem = null;
+        String restaurantName = "";
+
+        for (Restaurant restaurant : restaurants)
+        {
+            for (MenuItem item : restaurant.getMenuItems())
+            {
+                if (lowestItem == null || item.getPrice() < lowestItem.getPrice())
+                {
+                    lowestItem = item;
+                    restaurantName = restaurant.getName();
+                }
+            }
+        }
+
+        if (lowestItem != null)
+        {
+            System.out.printf("%s (%s): $%.2f%n", lowestItem.getName(), restaurantName, lowestItem.getPrice());
+        }
+
+        System.out.println();
     }
 
     //---------------------------------------------------------

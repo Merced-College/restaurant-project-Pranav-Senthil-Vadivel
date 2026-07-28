@@ -2,9 +2,9 @@
  * Restaurant Review System
  *
  * Group Members:
- * ________________________
- * ________________________
- * ________________________
+ * Brandon Diaz-Perez
+ * Brendan Hulse
+ * Pranav Senthil Vadivel
  *
  * CPSC 39
  */
@@ -30,6 +30,11 @@ public class RestaurantReviewSystem
             while (file.hasNextLine())
             {
                 String line = file.nextLine();
+                //Brendan Hulse 
+                if (line.equals(",,,,,,,"))
+                {
+                    continue;
+                }
 
                 // TODO:
                 // Split the CSV line into fields.
@@ -46,26 +51,93 @@ public class RestaurantReviewSystem
                 double price = 0;
                 int calories = 0;
 
+                //Brandon 
+                String[] fields = line.split(","); // split everything between commas
+
+                retaurantName = fields[0];
+                cuisine = fields[1];
+                rating = Double.parseDouble(fields[2]);
+                menuItemName = fields[3];
+                category = fields[4];
+                price = Double.parseDouble(fields[5]);
+                calories = Integer.parseInt(fields[6]);
+                String ingredientData = fields[7]; // complicated ingredient stuff
+
                 // Ingredient String
-                String ingredientData = "";
+                //String ingredientData = "";
 
                 //---------------------------------------------------
                 // TODO:
                 // Parse the line and assign values to the variables.
                 //---------------------------------------------------
 
+                // Brendan
+                boolean isTrue = true;
+                for (Restaurant r : restaurants) 
+                { // Checks to see whether the restaurant exists in our database already. Is true if it doesn't exist
+                    if (!r.getName().equals(restaurantName) && isTrue)
+                    {
+                        isTrue = true;
+                    }
+                    else 
+                    {
+                        isTrue = false;
+                    }
+                }
+                
+                if (isTrue) 
+                {// adds the restaurant if not already there
+                    Restaurant newRestaurant = new Restaurant();
+                    newRestaurant.setName(restaurantName);
+                    newRestaurant.setCuisine(cuisine);
+                    newRestaurant.setRating(rating);
+                    restaurants.add(newRestaurant);
+                }
                 //---------------------------------------------------
                 // TODO:
                 // Search the ArrayList to determine whether this
                 // restaurant already exists.
                 //---------------------------------------------------
 
-                Restaurant restaurant = null;
+                //Restaurant restaurant = null;
+
+                for (Restaurant r : restaurants) // adds current line's menu item into the restaurant that is defintely now on the list
+                {
+                    if (r.getName().equals(restaurantName))
+                    {
+                        MenuItem newItem = new MenuItem(menuItemName, category, price, calories); // already split the data and have parameterized the constructor
+                        String[] data = ingredientData.split(";");
+                        for (String a : data) 
+                        {
+                            String[] thisIngredient = a.split("\\|"); // vertical bar is apparently special a character so had to do special split it
+                            if (thisIngredient.length == 2)
+                            {
+                                Ingredient newIngredient = new Ingredient(thisIngredient[0], Boolean.parseBoolean(thisIngredient[1]));
+                                newItem.addIngredient(newIngredient);
+                            }
+                            else 
+                            {
+                                Ingredient newIngredient = new Ingredient(thisIngredient[0], Boolean.parseBoolean(thisIngredient[1]), thisIngredient[2]);
+                                newItem.addIngredient(newIngredient);
+                            }
+                        }
+                        r.addMenuItem(newItem); // puts everything together
+                       
+                       // restaurant = r;
+                    }
+                }
+                
+                
 
                 //---------------------------------------------------
                 // TODO:
                 // If the restaurant does not exist,
                 // create it and add it to the ArrayList.
+                /*if (restaurant == null)
+                {
+                    restaurant = new Restaurant(restaurantName, cuisine, rating);
+                    restaurants.add(restaurant);
+                }
                 //---------------------------------------------------
 
                 //---------------------------------------------------
@@ -105,7 +177,7 @@ public class RestaurantReviewSystem
                 // TODO:
                 // Add the MenuItem to the Restaurant.
                 //---------------------------------------------------
-
+            */
             }
 
             file.close();

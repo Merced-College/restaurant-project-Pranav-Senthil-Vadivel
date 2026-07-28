@@ -191,10 +191,19 @@ public class RestaurantReviewSystem
         //-------------------------------------------------------
         // Display all restaurants
         //-------------------------------------------------------
+        // Brendan
 
         for (Restaurant restaurant : restaurants)
         {
             System.out.println(restaurant);
+            for (MenuItem menu : restaurant.getMenuItems())
+            {
+                System.out.println(menu);// print their whole menu below each restaurant
+                for (Ingredient ingredient : menu.getIngredients())
+                {
+                    System.out.println(ingredient); // print every ingredient in each item below the menu item
+                }
+            }
             System.out.println();
         }
 
@@ -222,10 +231,26 @@ public class RestaurantReviewSystem
     //=========================================================
     // Group Algorithms
     //=========================================================
-
+    // Brandon
     public static void averageMenuPrice(ArrayList<Restaurant> restaurants)
     {
-        // TODO
+        System.out.println("=== Average Menu Item Price Per Restaurant ===");
+
+        for(Restaurant restaurant : restaurants)
+        {
+            double total = 0;
+            int count = restuarant.getMenuItems().size();
+
+            for(MenuItem item : restaurant.getMenuItems())
+            {
+                total += item.getPrice();
+            }
+
+            double average = total /count;
+            System.out.printf("%s: $%.2f%n", restaurant.getName(), average);
+        }
+
+        System.out.println();
     }
 
     public static void highestPricedMenuItem(ArrayList<Restaurant> restaurants)
@@ -262,8 +287,7 @@ public class RestaurantReviewSystem
 
     }
 
-    public static void menuItemsUnderPrice(ArrayList<Restaurant> restaurants,
-                                           double price)
+    public static void menuItemsUnderPrice(ArrayList<Restaurant> restaurants, double price)
     {
 
     }

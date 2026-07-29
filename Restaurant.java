@@ -12,7 +12,7 @@ public class Restaurant {
         name = "Unknown";
         cuisine = "Unknown";
         rating = 0.0;
-        menuItems = new ArrayList<MenuItem>();
+        menuItems = new ArrayList<MenuItem>(); 
     }
     // Parameterized constructor 
     public Restaurant(String name, String cuisine, double rating) {

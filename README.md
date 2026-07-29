@@ -235,16 +235,16 @@ How did you overcome the challenge?
 
 Before submitting, verify that:
 
-* [ ] My assigned class is complete.
-* [ ] All constructors are implemented.
-* [ ] All getters and setters are implemented.
-* [ ] The program compiles without errors.
-* [ ] The program runs correctly.
-* [ ] Required algorithms are completed.
-* [ ] One challenge algorithm is completed.
-* [ ] My README has been completed.
-* [ ] My code contains comments.
-* [ ] My work has been committed and pushed to GitHub.
+* [X] My assigned class is complete.
+* [X] All constructors are implemented.
+* [X] All getters and setters are implemented.
+* [X] The program compiles without errors.
+* [X] The program runs correctly.
+* [X] Required algorithms are completed.
+* [X] One challenge algorithm is completed.
+* [X] My README has been completed.
+* [X] My code contains comments.
+* [X] My work has been committed and pushed to GitHub.
 
 ---
 

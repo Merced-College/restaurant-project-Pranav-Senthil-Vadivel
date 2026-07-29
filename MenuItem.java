@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-// Whole file created by Brendan
+// Whole file created by Brendan Hulse
 public class MenuItem {
     private String name;
     private String category;

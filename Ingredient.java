@@ -4,7 +4,7 @@
 // Description: Creating a class called ingredients to tell java all the ingredients needed for each menu item in the restaurant
 
 //The Ingredient class represents the one ingredient used in a menu item
-public class Ingredient{
+public class Ingredient{ 
 
     // Instance Variables: Store information about the one ingredient (name, allergen, allergen type)
     private String name;

@@ -109,8 +109,12 @@ public class RestaurantReviewSystem
                         String[] data = ingredientData.split(";");
                         for (String a : data) 
                         {
-                            String[] thisIngredient = a.split("\\|"); // vertical bar is apparently special a character so had to do special split it
-                            if (thisIngredient.length == 2)
+                            String[] thisIngredient = a.split("\\|", -1); // vertical bar is apparently special a character so had to do special split it
+
+                            Ingredient newIngredient = new Ingredient(thisIngredient[0], Boolean.parseBoolean(thisIngredient[1]), thisIngredient[2]);
+
+                            newItem.addIngredient(newIngredient);
+                           /*  if (thisIngredient.length == 2)
                             {
                                 Ingredient newIngredient = new Ingredient(thisIngredient[0], Boolean.parseBoolean(thisIngredient[1]));
                                 newItem.addIngredient(newIngredient);
@@ -119,7 +123,7 @@ public class RestaurantReviewSystem
                             {
                                 Ingredient newIngredient = new Ingredient(thisIngredient[0], Boolean.parseBoolean(thisIngredient[1]), thisIngredient[2]);
                                 newItem.addIngredient(newIngredient);
-                            }
+                             } */
                         }
                         r.addMenuItem(newItem); // puts everything together
                        

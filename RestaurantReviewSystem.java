@@ -273,9 +273,24 @@ public class RestaurantReviewSystem
     //---------------------------------------------------------
     // Challenge Algorithms (Choose ONE)
     //---------------------------------------------------------
-
+    // Brendan Hulse
     public static void averageCalories(ArrayList<Restaurant> restaurants)
     {
+         System.out.println("=== Average Menu Item Calories Per Restaurant ===");
+
+        for (Restaurant restaurant : restaurants) {
+            int total = 0;
+            int count = restaurant.getMenuItems().size();
+
+            for (MenuItem item : restaurant.getMenuItems()) {
+                total += item.getCalories();
+            }
+
+            double average = total / count;
+            System.out.printf("%s: %.0f%n", restaurant.getName(), average);
+        }
+
+        System.out.println();
 
     }
 

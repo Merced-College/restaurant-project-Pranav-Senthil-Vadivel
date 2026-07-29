@@ -95,13 +95,13 @@ Your completed program should:
 
 Required Algorithms
 
-* [ ] Average menu item price
-* [ ] Highest-priced menu item
-* [ ] Lowest-priced menu item
+* [X] Average menu item price
+* [X] Highest-priced menu item
+* [X] Lowest-priced menu item
 
 Challenge Algorithm (Choose One)
 
-* [ ] Average calories
+* [X] Average calories
 * [ ] Search allergen ingredients
 * [ ] Highest-rated restaurant
 * [ ] Menu item with the most ingredients
@@ -124,13 +124,13 @@ Examples:
 
 **My Contributions**
 
----
+--- I created my assigned class, which was the Ingredient Class
 
----
+--- In the ingredient class I wrote plenty of getters and setters correctly
 
----
+--- I also created two of the algorithms in the main program (Highest and Lowest Priced Menu Items)
 
----
+--- Wrote plenty of comments 
 
 ---
 
@@ -138,35 +138,37 @@ Examples:
 
 ## Date
 
----
+--- 07/17/2026
 
 ## Time
 
----
+--- 3:00 PM - 4:30 PM
 
 ## Members Present
 
-* [ ]
-* [ ]
-* [ ]
+* [X] Brandon Diaz-Perez
+* [X] Brendan Hulse
+* [X] Pranav Senthil Vadivel (Me)
 
 ## What did your group accomplish?
 
----
+--- We first accomplished being able to share the assigned classes we finshed by ourselves
 
----
+--- Then we went over each class file together to see if every direction was followed and to see if everything works
 
----
+--- Then we assigned each parts of the main program (RestaurantReviewSystem) and worked on some parts together
+
+--- After the meeting, we used the group discussion option to share the codes and review each part of the main program till we finished
 
 ## What problems did your group solve?
 
----
+--- To start we solved the problem of being able to have a copy of each class file
 
----
+--- Then we had some issues with a couple of the classes due to the Array part of the code, which we figured out when we read the direction again
 
----
+--- We solved the problem behind each parts of the main program RestaurantReviewSystem because there were lots of TODOs and weren't clear at first
 
----
+--- We lastly solved some issues regarding the options algorithm as we chose the average calories even though it was very similar to the average price code
 
 # What I Learned
 
@@ -187,35 +189,35 @@ Possible topics:
 
 Reflection
 
----
+--- Java classes and how they work
 
----
+--- ArrayList and how they work together with the main program
 
----
+--- Debugging, lot of it as there are so many files and hundreds of lines of code
 
----
+--- Figuring out Algorithms as it is was the whole main program
 
----
+--- Working with a team as we all need to cooperate in a timely manner
 
----
+--- Learned a lot about how GitHub works and how the repository system works
 
 # Challenges
 
 What was the most difficult part of this assignment?
 
----
+--- The most difficult part of this assignment was really the main program
 
----
+--- There were certain parts of the program that required null but I wasn't entirely sure of why and how it worked
 
----
+--- There were also some parts where I need a proper for loop to incorporate the loop in order for each menu item to pop-up from each restaurant
 
 How did you overcome the challenge?
 
----
+--- I with the help of my entire group, together we figured out why some parts needed the null and so on
 
----
+--- Together we used some notes and older ZyBook assignments to figure out how the for loop should work
 
----
+--- We also watched some old videos for ome explanation regarding the loops as well
 
 ---
 
@@ -227,7 +229,7 @@ How did you overcome the challenge?
 4. Run `RestaurantReviewSystem.java`.
 5. Verify that the program reads the data correctly and all algorithms execute successfully.
 
----
+--- 
 
 # Submission Checklist
 
@@ -252,4 +254,4 @@ I certify that I actively participated in this group assignment, understand the 
 
 Student Signature:
 
----
+--- Pranav Senthil Vadivel (07/28/2026)
